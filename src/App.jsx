@@ -1,9 +1,10 @@
+import Header from "./components/Header"
 import { ThemeProvider } from "./context/ThemeContext"
 
 function App() {
   return (
     <ThemeProvider>
-      <h1>Theme</h1>
+      <Header />
     </ThemeProvider>
   )
 }
