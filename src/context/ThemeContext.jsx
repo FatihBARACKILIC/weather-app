@@ -3,7 +3,10 @@ import { createContext, useContext, useEffect, useState } from "react"
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") && "dark")
+  const defaultTheme = localStorage.getItem("theme")
+  const [theme, setTheme] = useState(
+    defaultTheme === null ? "dark" : defaultTheme
+  )
 
   useEffect(() => {
     localStorage.setItem("theme", theme)

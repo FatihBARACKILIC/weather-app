@@ -1,10 +1,13 @@
-import Header from "./components/Header"
+import Container from "./components/Container"
 import { ThemeProvider } from "./context/ThemeContext"
+import { WeatherProvider } from "./context/WeatherContext"
 
 function App() {
   return (
     <ThemeProvider>
-      <Header />
+      <WeatherProvider>
+        <Container />
+      </WeatherProvider>
     </ThemeProvider>
   )
 }
